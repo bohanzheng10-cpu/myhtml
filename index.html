@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人 / 作品集 | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-brand">个人 / 作品集</div>
+        <ul class="nav-links">
+            <li><a href="#works-overlay" id="open-works-nav">作品</a></li>
+            <li><a href="#about-section">关于</a></li>
+            <li><a href="#contact-section">联系</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-content">
+            <div class="year-badge">2025-2026</div>
+            <h1 class="hero-title outline-text" id="wave-title">EXHIBIT OF WORKS</h1>
+            <a href="#works-overlay" class="scroll-down" id="open-works-hero">探索作品 ↓</a>
+        </div>
+    </header>
+
+    <section id="about-section" class="about">
+        <div class="about-container">
+            <h2 class="section-heading">ABOUT ME</h2>
+            <p class="about-text">
+                你好，我是一名独立视觉设计师。我热衷于探索数字艺术与商业设计的边界，擅长将抽象的概念转化为具象的视觉语言。我相信，每一次按下快门、每一次建立模型、每一次排版布局，都是在构建一个全新的世界。保持好奇，持续创造，用极简的逻辑传达最深刻的共鸣。
+            </p>
+        </div>
+    </section>
+
+    <section id="contact-section" class="contact">
+        <h2 class="section-heading">GET IN TOUCH</h2>
+        <div class="contact-info">
+            <p>WeChat: Design_Studio_2026</p>
+            <p>Email: hello@yourportfolio.art</p>
+            <p>Behance: behance.net/yourname</p>
+        </div>
+        <div class="footer-copy">© 2026 ALL RIGHTS RESERVED.</div>
+    </section>
+
+    <div id="works-overlay" class="works-overlay">
+        <div class="works-header">
+            <button id="close-works-btn" class="close-works-btn">返回目录 ✕</button>
+        </div>
+        
+        <div class="grid-container" id="portfolio-grid">
+            <div class="portfolio-item" data-category="包装设计" data-title="包装设计 / 01" data-date="—" data-specs="—" data-creator="郑博晗" data-desc="包装设计作品展示。" data-img="images/dc82192d22fb82d3a3dc067e28130b9b.jpg">
+                <img src="images/dc82192d22fb82d3a3dc067e28130b9b.jpg" alt="包装 01">
+                <div class="overlay"><h3>包装设计</h3></div>
+            </div>
+
+            <div class="portfolio-item" data-category="包装设计" data-title="包装设计 / 02" data-date="—" data-specs="—" data-creator="郑博晗" data-desc="包装设计作品展示。" data-img="images/e2db350bb4f7b904228cef24b17e1e72.jpg">
+                <img src="images/e2db350bb4f7b904228cef24b17e1e72.jpg" alt="包装 02">
+                <div class="overlay"><h3>包装设计</h3></div>
+            </div>
+
+            <div class="portfolio-item" data-category="3D渲染" data-title="3D渲染 / 01" data-date="—" data-specs="—" data-creator="郑博晗" data-desc="3D渲染作品展示。" data-img="images/22783717d39fa63f0736bfae29b01e59.jpg">
+                <img src="images/22783717d39fa63f0736bfae29b01e59.jpg" alt="3D 01">
+                <div class="overlay"><h3>3D渲染</h3></div>
+            </div>
+
+            <div class="portfolio-item" data-category="3D渲染" data-title="3D渲染 / 02" data-date="—" data-specs="—" data-creator="郑博晗" data-desc="3D渲染作品展示。" data-img="images/6c226399b20108483de2e339292ce821.jpg">
+                <img src="images/6c226399b20108483de2e339292ce821.jpg" alt="3D 02">
+                <div class="overlay"><h3>3D渲染</h3></div>
+            </div>
+
+            <div class="portfolio-item" data-category="海报设计" data-title="海报设计 / 01" data-date="—" data-specs="—" data-creator="郑博晗" data-desc="海报设计作品展示。" data-img="images/图片1.jpg">
+                <img src="images/图片1.jpg" alt="海报 01">
+                <div class="overlay"><h3>海报设计</h3></div>
+            </div>
+
+            <div class="portfolio-item" data-category="海报设计" data-title="海报设计 / 02" data-date="—" data-specs="—" data-creator="郑博晗" data-desc="海报设计作品展示。" data-img="images/图片2.jpg">
+                <img src="images/图片2.jpg" alt="海报 02">
+                <div class="overlay"><h3>海报设计</h3></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content-split">
+            <div class="modal-left">
+                <img id="modal-img" src="" alt="Project Detail">
+            </div>
+            <div class="modal-right">
+                <span class="close-btn" id="close-modal-btn">&times;</span>
+                <div class="modal-category" id="modal-category">分类</div>
+                <h2 id="modal-title">作品标题</h2>
+                <div class="modal-meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">创作时间</span>
+                        <span class="meta-value" id="modal-date">时间</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">材质尺寸</span>
+                        <span class="meta-value" id="modal-specs">尺寸</span>
+                    </div>
+                    <div class="meta-item" style="grid-column: span 2;">
+                        <span class="meta-label">创作者</span>
+                        <span class="meta-value" id="modal-creator">姓名</span>
+                    </div>
+                </div>
+                <div class="modal-divider"></div>
+                <span class="meta-label">作品描述</span>
+                <p id="modal-desc">详细描述文案...</p>
+                <a href="#" class="view-case-btn">查看案例</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
