@@ -23,6 +23,14 @@ const worksOverlay = document.getElementById('works-overlay');
 const closeWorksBtn = document.getElementById('close-works-btn');
 const allWorks = document.querySelectorAll('.portfolio-item');
 
+function toAssetUrl(path) {
+    try {
+        return new URL(path, document.baseURI).toString();
+    } catch {
+        return path;
+    }
+}
+
 function openWorksOverlay() {
     allWorks.forEach(work => work.classList.add('show'));
     if (!worksOverlay) return;
@@ -67,7 +75,7 @@ allWorks.forEach(item => {
     item.addEventListener("click", () => {
         document.getElementById("modal-title").textContent = item.getAttribute("data-title");
         document.getElementById("modal-desc").textContent = item.getAttribute("data-desc");
-        document.getElementById("modal-img").src = item.getAttribute("data-img");
+        document.getElementById("modal-img").src = toAssetUrl(item.getAttribute("data-img"));
         document.getElementById("modal-category").textContent = item.getAttribute("data-category");
         document.getElementById("modal-date").textContent = item.getAttribute("data-date");
         document.getElementById("modal-specs").textContent = item.getAttribute("data-specs");
